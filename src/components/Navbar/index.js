@@ -1,15 +1,18 @@
+import {Link} from 'react-router-dom'
+
 import ThemeContext from '../../context/ThemeContext'
 
-import {
-  NavbarContainer,
-  LogoImage,
-  NavPage,
-  NavPagesContainer,
-  ListNavItem,
-  ThemeButtonContainer,
-  ThemeButton,
-  StyledLink,
-} from './StyledComponents'
+import './index.css'
+// import {
+//   NavbarContainer,
+//   LogoImage,
+//   NavPage,
+//   NavPagesContainer,
+//   ListNavItem,
+//   ThemeButtonContainer,
+//   ThemeButton,
+//   StyledLink,
+// } from './StyledComponents'
 
 const themeImages = {
   lightThemeLogo:
@@ -32,29 +35,41 @@ const Navbar = () => (
       const themeImage = isDarkTheme
         ? themeImages.darkThemeButtonImage
         : themeImages.lightThemeButtonImage
+
+      const navbarBgClassName = isDarkTheme
+        ? 'dark-nav-container-bg-color'
+        : null
+
+      const navItemColor = isDarkTheme ? 'dark-nav-color' : null
+
       return (
-        <NavbarContainer isDarkTheme={isDarkTheme}>
-          <LogoImage src={logoImage} alt="website logo" />
+        <div className={`navbar-container ${navbarBgClassName}`}>
+          <img className="logo-image" src={logoImage} alt="website logo" />
 
-          <NavPagesContainer>
-            <ListNavItem>
-              <StyledLink to="/">
-                <NavPage isDarkTheme={isDarkTheme}>Home</NavPage>
-              </StyledLink>
-            </ListNavItem>
+          <ul className="nav-page-container">
+            <li className={`list-nav-item ${navItemColor}`}>
+              <Link to="/" className={`styled-link ${navItemColor}`}>
+                Home
+              </Link>
+            </li>
 
-            <ListNavItem>
-              <StyledLink to="/about">
-                <NavPage isDarkTheme={isDarkTheme}>About</NavPage>
-              </StyledLink>
-            </ListNavItem>
-          </NavPagesContainer>
-          <ThemeButtonContainer>
-            <ThemeButton type="button" onClick={toggleTheme}>
-              <LogoImage src={themeImage} alt="theme" />
-            </ThemeButton>
-          </ThemeButtonContainer>
-        </NavbarContainer>
+            <li className={`list-nav-item ${navItemColor}`}>
+              <Link to="/about" className={`styled-link ${navItemColor}`}>
+                About
+              </Link>
+            </li>
+          </ul>
+          <div className="theme-button-container">
+            <button
+              className="theme-button"
+              type="button"
+              data-testid="theme"
+              onClick={toggleTheme}
+            >
+              <img className="logo-image" src={themeImage} alt="theme" />
+            </button>
+          </div>
+        </div>
       )
     }}
   </ThemeContext.Consumer>

@@ -1,1 +1,26 @@
-/* Write your CSS here */
+.AboutPageContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-bg-dark {
+  background-color: #000000;
+}
+.AboutImgAndHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutHeading {
+  font-family: 'roboto';
+  color: #171f46;
+}
+.about-dark-heading {
+  color: #ffffff;
+}
+.AboutImage {
+  height: 120px;
+  width: 120px;
+}

@@ -1,1 +1,45 @@
-/* Write your CSS here */
+.navbar-container {
+  height: 50px;
+  display: flex;
+  align-items: 'center';
+  justify-content: space-between;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+}
+.dark-nav-container-bg-color {
+  background-color: #333333;
+}
+.logo-image {
+  height: 30px;
+  width: 30px;
+}
+.nav-page-container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 15px;
+}
+.list-nav-item {
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  color: #171f46;
+}
+
+.theme-button-container {
+  border: none;
+  background-color: transparent;
+}
+.theme-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.styled-link {
+  text-decoration: none;
+}
+.dark-nav-color {
+  color: #ffffff;
+}

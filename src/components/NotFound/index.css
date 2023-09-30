@@ -1,1 +1,36 @@
-/* Write your CSS here */
+.NotFoundPageContainer {
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dark-not-found-bg {
+  background-color: #000000;
+}
+.NotFoundImgAndHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.NotFoundHeading {
+  font-family: 'roboto';
+  color: #333333;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 400;
+}
+.NotFoundImage {
+  height: 200px;
+  width: 200px;
+}
+.NotFoundText {
+  font-family: 'roboto';
+  text-align: 'center';
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+}
+.dark-text-color {
+  color: aliceblue;
+}
